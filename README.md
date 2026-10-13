@@ -128,24 +128,6 @@ El grafo de ejemplo del formato es un **DAG** (el nodo `J` no tiene salidas). Fu
 5. **Probar desde `/docs`**
    Abre <http://127.0.0.1:8000/docs>, elige un endpoint, pulsa **Try it out**, pega el JSON y pulsa **Execute**.
 
-### Script `run.sh` (opcional)
-
-```bash
-#!/usr/bin/env bash
-uv run uvicorn main:app --host 127.0.0.1 --port 8000 --reload
-```
-
-```bash
-chmod +x run.sh
-./run.sh
-```
-
-### Generar `requirements.txt` (opcional)
-
-```bash
-uv export --no-hashes --no-dev -o requirements.txt
-```
-
 ## Ejemplos de uso
 
 **Dijkstra**
