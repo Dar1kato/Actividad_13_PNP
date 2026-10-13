@@ -1,0 +1,23 @@
+Genera un backend de python, que funcione con FastAPI, que implemente algoritmos que basados en su complejidad son clasificados como Polinómicos (P) o No Determinísticos en el tiempo (NP), identificando su comportamiento ante escenarios deterministas o no deterministas. Estas son las especificaciones:
+
+Dando continuidad al backend implementado con anterioridad se agregarán 3 endpoints adicionales, donde se implementen los siguientes algoritmos:
+
+* Dijkstra
+* Algoritmo del agente viajero
+* Algoritmo del agente viajero con heurística voraz
+
+Además, un endpoint auxiliar que genere grafos sintéticos (ponderados).
+Cada endpoint debe retornar la siguiente información:
+
+* tiempo de ejecución en ms
+* memoria consumida en tiempo de ejecución
+* no. de nodos recorridos
+* costo del camino encontrado 
+
+El backend debe recibir grafos de n nodos con este formato 
+```{ 
+	"grafo": { "A": [["B", 15], ["C", 22], ["D", 10]], "B": [["E", 35], ["F", 18]], "C": [["E", 20], ["G", 45]], "D": [["F", 28], ["G", 30]], "E": [["H", 12], ["I", 25]], "F": [["H", 40], ["I", 15]], "G": [["I", 10], ["J", 50]], "H": [["J", 14]], "I": [["J", 8]], "J": [] },
+}
+```
+
+Generaras un script de python llamado main.py, que se alojara en un directorio de uv creado con `uv init`. El backend debe ser corrido con uv, y debe ser probado desde la ruta `/docs`, pudiendo recibir los nodos y regresando la información correspondiente. Si tienes alguna duda sobre el funcionamiento del backend o los requerimientos del proyecto, hazmelo saber.
